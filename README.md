@@ -1,4 +1,4 @@
 color
 =====
 
-An online color user
+My first attempt to use html5, javascript, and css2.
