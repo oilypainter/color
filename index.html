@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive drawing</title>
+	<link rel="stylesheet" href="painting.css">
+</head>
+<body>
+	
+
+	<canvas id="canvas"  >
+	Please upgrade to firefox or chome. Your browser does not support this program.
+	</canvas>
+
+	<canvas id="patternCanvas"  width = "64" height = "64">
+	</canvas>
+	<canvas id="pictureCanvas" width = "64" height = "64">
+	</canvas>
+	
+<p>	</p>
+	<button type="button" id="pencil"><img src="icons/pen1.png"></button>
+	<button type="button" id="brush"><img src="icons/brush1.png"></button>
+	<button type="button" id="stamp"><img src="icons/stamp.png"></button>
+	<button type="button" id="eraser"><img src="icons/eraser1.png"></button>
+	<button type="button" id="texture"><img src="icons/titleTexture.png"></button>
+<div id="textureInstructions" class="textureControls">
+	<button type = "button" id="texture0"><img src="images/texture.png"></button>
+	<button type="button" id="texture1"><img src="images/texture1.png"></button>
+	<button type="button" id="texture2"><img src="images/texture2.png"></button>
+</div>	
+<!--  this button shows on the screen and calls the slider to change brush size -->
+	<button type="button" id="sizeOfBrush"><img src="icons/brushSize.png"></button>
+	<!--<input type="button"  id="sizeOfBrush" value="Brush Size"></input> -->
+	
+	<!-- the code for changing the size of the brush or eraser -->
+<!-- the div determines the size of the window for brush size and hides the range button
+      at the time of loading the program.  the type=range shows and defines the slider -->
+ <div id='instructions' class='floatingControls'>
+	<input type="range"  id="brushSize" min="1" max="50" value="20" step="1"><p>Brush Size</p></input>
+	<input type="range" id="brushOpacity" min ="0.00" max = "1.0" step=".01"><p>Brush Opacity</p></input>
+	<input type="button" id="ok" value = 'OK'></input>
+</div>
+
+	<!-- This is the html code for the colorpicker -->
+	<input type="color" id="drawingColor" ></input>
+	
+<!-- this button shows on the opening windows the image button to get to the files -->
+<!--	<input type = "button" id="imageFile" value="Image" ><img src="icons/image1.png"></input> -->
+	<button type="button" id="imageFile"><img src = "icons/image1.png"></button>
+	
+<!-- the div code below will determine the size of window for the list of image files and hides the list of images until the Image button above is pressed -->
+<div id="fileInstructions" class="fileFloatingControls">
+	<p><input type="button" id="newDrawing" value="New Canvas"></input></p>
+	<p><input type="button" id="drawingOne" value = "California Poppy One"></input></p>
+	<P><input type="button" id="drawingTwo" value = "Happy Mouse"></input></p>
+	<p><input type="button" id="drawingThree" value = "Penguin On Ice"></input></p>
+	<p><input type="button" id="drawingFour" value = "Mulberry Tree by Van Gogh"></input> </p>
+
+<!--	<input type="file" id="input" name="open"></input> -->
+</div>
+<!-- Save file to local drive -->
+<a id="download" download="text.png"><img src= "icons/save.png"></a>
+
+	
+	<script src="painting.js"></script>
+</body>
+</html>
